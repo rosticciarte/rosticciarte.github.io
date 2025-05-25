@@ -1,1 +1,190 @@
-<html><h1>Rosticciarte website</h1></html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosticciarte - Pizzeria Rosticceria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    header {
+      background-color: #b22222;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #ff6347;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+      background-size: cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 2rem;
+      text-align: center;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .menu-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .menu-category {
+      flex: 1 1 300px;
+    }
+    .menu-category h3 {
+      background-color: #ff6347;
+      color: white;
+      padding: 0.5rem;
+      margin-top: 0;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.3rem 0;
+      border-bottom: 1px dotted #ccc;
+    }
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+    .carousel {
+      display: flex;
+      width: max-content;
+      animation: scroll 20s linear infinite;
+      gap: 1rem;
+    }
+    .carousel img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .carousel {
+        animation: scroll 40s linear infinite;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rosticciarte</h1>
+    <p>Rosticceria e pizzeria con specialità siciliane e palermitane</p>
+  </header>
+  <nav>
+    <a href="#chi-siamo">Chi Siamo</a>
+    <a href="#menu">Menù</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+  <div class="hero">
+    Sapori autentici della tradizione siciliana
+  </div>
+  <section id="chi-siamo">
+    <h2>Chi Siamo</h2>
+    <p>Rosticciarte è una rosticceria e pizzeria con specialità siciliane e palermitane. Offriamo ogni giorno arancine, sfincioni, calzoni e pizze al taglio preparati secondo le ricette tradizionali. Siamo a Corchiano, in provincia di Viterbo, in Via Fabrica di Roma, 43.</p>
+    <div class="carousel-wrapper">
+      <div class="carousel">
+        <img src="https://source.unsplash.com/300x200/?sicilian,food" alt="Specialità 1">
+        <img src="https://source.unsplash.com/301x200/?pizza" alt="Pizza">
+        <img src="https://source.unsplash.com/302x200/?arancini" alt="Arancine">
+        <img src="https://source.unsplash.com/303x200/?palermo,food" alt="Palermitana">
+        <img src="https://source.unsplash.com/300x200/?sicilian,food" alt="Specialità 1">
+        <img src="https://source.unsplash.com/301x200/?pizza" alt="Pizza">
+      </div>
+    </div>
+  </section>
+  <section id="menu">
+    <h2>Il Nostro Menù</h2>
+    <div class="menu-columns">
+      <div class="menu-category">
+        <h3>Rosticceria</h3>
+        <div class="menu-item"><span>Arancina accarne</span><span>2,50 €</span></div>
+        <div class="menu-item"><span>Arancina abburro</span><span>2,50 €</span></div>
+        <div class="menu-item"><span>Ravazzata</span><span>2,50 €</span></div>
+        <div class="menu-item"><span>Rizzola fritta</span><span>2,50 €</span></div>
+        <div class="menu-item"><span>Calzone al forno</span><span>2,50 €</span></div>
+        <div class="menu-item"><span>Calzone fritto</span><span>2,50 €</span></div>
+        <div class="menu-item"><span>Rollò</span><span>2,50 €</span></div>
+        <div class="menu-item"><span>Pizzetta rossa palermitana</span><span>2,50 €</span></div>
+        <div class="menu-item"><span>L'americana</span><span>3,00 €</span></div>
+        <div class="menu-item"><span>Sfincione</span><span>3,00 €</span></div>
+        <div class="menu-item"><span>Supplì</span><span>1,50 €</span></div>
+      </div>
+      <div class="menu-category">
+        <h3>Pizzeria</h3>
+        <div class="menu-item"><span>Pizza bianca</span><span>1,00 € al pz.</span></div>
+        <div class="menu-item"><span>Pizza rossa</span><span>1,20 € al pz.</span></div>
+        <div class="menu-item"><span>Pizza margherita</span><span>1,50 € al pz.</span></div>
+        <div class="menu-item"><span>Pizza farcita</span><span>2,00 € al pz.</span></div>
+        <h3>Pizza in teglia</h3>
+        <div class="menu-item"><span>Bianca</span><span>10,00 €</span></div>
+        <div class="menu-item"><span>Rossa</span><span>13,00 €</span></div>
+        <div class="menu-item"><span>Margherita</span><span>15,00 €</span></div>
+        <div class="menu-item"><span>Farcita</span><span>18,00 €</span></div>
+        <h3>Box Pollo</h3>
+        <div class="menu-item"><span>1 pollo</span><span>15,90 €</span></div>
+        <div class="menu-item"><span>1/2 pollo</span><span>7,50 €</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="contatti">
+    <h2>Contattaci</h2>
+    <p>Email: info@rosticciarte.it</p>
+    <p>Telefono: +39 123 456 7890</p>
+    <p>Indirizzo: Via Fabrica di Roma, 43 - Corchiano (VT)</p>
+  </section>
+  <footer>
+    &copy; 2025 Rosticciarte. Tutti i diritti riservati.
+  </footer>
+</body>
+</html>
